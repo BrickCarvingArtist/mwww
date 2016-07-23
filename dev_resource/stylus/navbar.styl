@@ -1,0 +1,93 @@
+@import "reset"
+.topNav
+	position absolute
+	top 0
+	left 0
+	right 0
+	height 50px
+	background-color rgb(48, 96, 192)
+	.right
+		float right
+		padding 10px
+		a
+			float left
+			margin-top 20px
+			margin-right 10px
+			font-size 18px
+			font-weight bold
+			color rgb(36, 36, 36)
+.leftNav
+	position absolute
+	top 50px
+	bottom 0
+	left 0
+	width 160px
+	overflow-y scroll
+	background-color rgb(24, 24, 64)
+	.sup
+		width 100%
+		&.contract
+			strong
+				background-color (@background-color*3/2)
+				border-bottom-color (@background-color*4/3)
+			.sub
+				height 0 !important
+				transition height .25s
+		&.expand
+			.sub
+				transition height .25s
+		strong
+			float left
+			width 100%
+			background-color (@background-color/4)
+			border-bottom 1px solid transparent
+			text-align center
+			font-size 16px
+			font-weight bold
+			line-height 40px
+			color rgb(255, 255, 255)
+			cursor pointer
+			&:hover
+				background-color (@background-color*8)
+		.sub
+			float left
+			width 100%
+			overflow hidden
+			a
+				float left
+				width 100%
+				text-align center
+				font-size 14px
+				font-weight bold
+				line-height 40px
+				color rgb(255, 255, 255)
+				&:hover
+					background-color (@background-color*2)
+				&.current
+					background-color rgb(48, 96, 192)
+.sideNav
+	position absolute
+	top 50px
+	bottom 0
+	left 160px
+	width 160px
+	background-color rgb(224, 224, 255)
+	strong
+		float left
+		padding-left 20px
+		width 100%
+		background-color (@background-color/10*9)
+		font-size 14px
+		font-weight bold
+		line-height 40px
+		color rgb(66, 66, 66)
+	a
+		float left
+		width 100%
+		padding-left 30px
+		font-size 12px
+		line-height 40px
+		&:hover
+			background-color rgb(240, 240, 255)
+		&.current
+			background-color rgb(255, 255, 255)
